@@ -1,6 +1,6 @@
 # Meu Projeto Tomcat
 
-Aplicação web Java empacotada como WAR com Maven.
+Aplicação web Java empacotada como WAR com Maven. Código baseado no curso Java Web Development / JEE/ Jakarta EE (Servlet,JSP,MVC)
 
 ## Pré-requisitos
 
