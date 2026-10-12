@@ -33,4 +33,58 @@
         <servlet-name>FirstHttpServlet</servlet-name>
         <url-pattern>/myHttpServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <display-name>FeedbackServlet</display-name>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <servlet-class>com.exemplo.hello.servlets.FeedbackServlet</servlet-class>
+        <init-param>
+            <description>Organization Email</description>
+            <param-name>company-email</param-name>
+            <param-value>jeecourse@hotmail.com</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FeedbackServlet</servlet-name>
+        <url-pattern>/feedbackServlet</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>db-ip</param-name>
+        <param-value>127.0.0.1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>db-port</param-name>
+        <param-value>3306</param-value>
+    </context-param>
+
+    <servlet>
+        <display-name>ContextParamExample</display-name>
+        <servlet-name>ContextParamExample</servlet-name>
+        <servlet-class>com.exemplo.hello.servlets.scopes.ContextParamExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextParamExample</servlet-name>
+        <url-pattern>/ContextParamExample</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ApplicationScopeExample</display-name>
+        <servlet-name>ApplicationScopeExample</servlet-name>
+        <servlet-class>com.exemplo.hello.servlets.scopes.ApplicationScopeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplicationScopeExample</servlet-name>
+        <url-pattern>/ApplicationScopeExample</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ApplicationScopeExample2</display-name>
+        <servlet-name>ApplicationScopeExample2</servlet-name>
+        <servlet-class>com.exemplo.hello.servlets.scopes.ApplicationScopeServlet2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApplicationScopeExample2</servlet-name>
+        <url-pattern>/ApplicationScopeExample2</url-pattern>
+    </servlet-mapping>
 </web-app>
