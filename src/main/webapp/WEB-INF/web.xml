@@ -97,4 +97,14 @@
         <servlet-name>SessionScopeExample</servlet-name>
         <url-pattern>/isVisited</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <display-name>HttpServletRequestExample</display-name>
+        <servlet-name>HttpServletRequestExample</servlet-name>
+        <servlet-class>com.exemplo.hello.httprequest.example.HttpServletRequestExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletRequestExample</servlet-name>
+        <url-pattern>/testRequest</url-pattern>
+    </servlet-mapping>
 </web-app>
