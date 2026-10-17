@@ -87,4 +87,14 @@
         <servlet-name>ApplicationScopeExample2</servlet-name>
         <url-pattern>/ApplicationScopeExample2</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <display-name>SessionScopeExample</display-name>
+        <servlet-name>SessionScopeExample</servlet-name>
+        <servlet-class>com.exemplo.hello.servlets.scopes.session.SessionScopeExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionScopeExample</servlet-name>
+        <url-pattern>/isVisited</url-pattern>
+    </servlet-mapping>
 </web-app>
