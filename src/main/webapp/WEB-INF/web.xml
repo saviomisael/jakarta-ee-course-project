@@ -147,4 +147,44 @@
         <error-code>404</error-code>
         <location>/pageNotFound.jsp</location>
     </error-page>
+
+    <servlet>
+        <display-name>IncludeExample</display-name>
+        <servlet-name>IncludeExample</servlet-name>
+        <servlet-class>com.exemplo.hello.includeforwardexample.servlets.IncludeExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncludeExample</servlet-name>
+        <url-pattern>/IncludeExample</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>IncludeExample1</display-name>
+        <servlet-name>IncludeExample1</servlet-name>
+        <servlet-class>com.exemplo.hello.includeforwardexample.servlets.IncludeExample1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncludeExample1</servlet-name>
+        <url-pattern>/IncludeExample1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ForwardExample</display-name>
+        <servlet-name>ForwardExample</servlet-name>
+        <servlet-class>com.exemplo.hello.includeforwardexample.servlets.ForwardExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardExample</servlet-name>
+        <url-pattern>/ForwardExample</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ForwardExample1</display-name>
+        <servlet-name>ForwardExample1</servlet-name>
+        <servlet-class>com.exemplo.hello.includeforwardexample.servlets.ForwardExample1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ForwardExample1</servlet-name>
+        <url-pattern>/ForwardExample1</url-pattern>
+    </servlet-mapping>
 </web-app>
