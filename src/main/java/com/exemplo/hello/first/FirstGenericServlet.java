@@ -22,6 +22,7 @@ public class FirstGenericServlet extends GenericServlet {
 
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+        res.setContentType("text/html;charset=UTF-8");
         PrintWriter printWriter = res.getWriter(); // uses text stream
         printWriter.print("<h1>Hello World from Generic Servlet!</h1>");
         printWriter.print("<h1>Today is " + new Date() + "</h1>");

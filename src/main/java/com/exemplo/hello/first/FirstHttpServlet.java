@@ -31,6 +31,7 @@ public class FirstHttpServlet extends HttpServlet {
     private void doRequest(HttpServletRequest req, HttpServletResponse res, HttpVerb verb) throws ServletException, IOException {
         var method = verb.equals(HttpVerb.GET) ? "(doGet)" : "(doPost)";
 
+        res.setContentType("text/html;charset=UTF-8");
         PrintWriter printWriter = res.getWriter(); // uses text stream
         printWriter.print("<h1>Hello World from Http Servlet " + method + "!</h1>");
         printWriter.print("<h1>Today is " + new Date() + "</h1>");

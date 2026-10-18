@@ -107,4 +107,44 @@
         <servlet-name>HttpServletRequestExample</servlet-name>
         <url-pattern>/testRequest</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <display-name>ResponseHeaderExample</display-name>
+        <servlet-name>ResponseHeaderExample</servlet-name>
+        <servlet-class>com.exemplo.hello.httpservletresponse.ResponseHeaderExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResponseHeaderExample</servlet-name>
+        <url-pattern>/refreshHeaderExample</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>BinaryStreamExample</display-name>
+        <servlet-name>BinaryStreamExample</servlet-name>
+        <servlet-class>com.exemplo.hello.httpservletresponse.BinaryStreamExample</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BinaryStreamExample</servlet-name>
+        <url-pattern>/showImageFile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>ErrorHandling</display-name>
+        <servlet-name>ErrorHandling</servlet-name>
+        <servlet-class>com.exemplo.hello.errorhandling.servlets.ErrorHandling</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ErrorHandling</servlet-name>
+        <url-pattern>/ErrorHandling</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <exception-type>com.exemplo.hello.exception.MyException</exception-type>
+        <location>/myExceptionErrorPage.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/pageNotFound.jsp</location>
+    </error-page>
 </web-app>

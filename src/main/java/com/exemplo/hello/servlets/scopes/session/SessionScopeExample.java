@@ -13,6 +13,7 @@ public class SessionScopeExample extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //req.getCookies();// cookies are saved on the browser and session on the server
+        resp.setContentType("text/html;charset=UTF-8");
 
         PrintWriter printWriter = resp.getWriter().append("Served at: ").append(req.getContextPath());
 

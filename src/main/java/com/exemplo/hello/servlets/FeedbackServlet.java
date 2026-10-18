@@ -22,6 +22,7 @@ public class FeedbackServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 1 - read init param
         resp.setContentType("text/html;charset=UTF-8");
+        req.setCharacterEncoding("UTF-8");
         PrintWriter printWriter = resp.getWriter();
         printWriter.print("<h2>Init Param Value is " + companyInitParameter + "</h2>");
 

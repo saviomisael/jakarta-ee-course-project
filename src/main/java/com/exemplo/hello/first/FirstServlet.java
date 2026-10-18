@@ -28,6 +28,7 @@ public class FirstServlet implements Servlet {
     @Override
     public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
         // in here enters the main code of the servlet
+        res.setContentType("text/html;charset=UTF-8");
         PrintWriter printWriter = res.getWriter(); // uses text stream
         printWriter.print("<h1>Hello World!</h1>");
         printWriter.print("<h1>Today is " + new Date() + "</h1>");
