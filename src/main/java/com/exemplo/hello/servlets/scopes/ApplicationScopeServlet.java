@@ -16,7 +16,9 @@ public class ApplicationScopeServlet extends HttpServlet {
         PrintWriter printWriter = resp.getWriter();
 
         try {
-            Class.forName("com.mysql.jdbc.Driver"); // load the driver
+            // Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'.
+            // The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+            //Class.forName("com.mysql.jdbc.Driver"); // load the driver
             // Security Implications
             // Setting allowPublicKeyRetrieval=true introduces a security risk:
             // Man-in-the-Middle (MitM) Attacks: If you connect to an untrusted or compromised database server over an unencrypted connection, a malicious actor could intercept the connection, pretend to be the MySQL server, and trick your application into sending your clear-text password encrypted with a key they control.
