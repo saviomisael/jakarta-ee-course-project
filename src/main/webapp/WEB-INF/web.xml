@@ -219,4 +219,8 @@
         <servlet-name>MyServlet</servlet-name>
         <url-pattern>/MyServlet</url-pattern>
     </servlet-mapping>
+
+    <listener>
+        <listener-class>com.exemplo.hello.servlets.scopes.session.listeners.ContextListener</listener-class>
+    </listener>
 </web-app>

@@ -1,5 +1,7 @@
 package com.exemplo.hello.servlets.scopes;
 
+import com.exemplo.hello.servlets.DBConnection;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +24,9 @@ public class ApplicationScopeServlet extends HttpServlet {
             // Security Implications
             // Setting allowPublicKeyRetrieval=true introduces a security risk:
             // Man-in-the-Middle (MitM) Attacks: If you connect to an untrusted or compromised database server over an unencrypted connection, a malicious actor could intercept the connection, pretend to be the MySQL server, and trick your application into sending your clear-text password encrypted with a key they control.
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee_db?allowPublicKeyRetrieval=true", "root", "root"); // Creates the connection
+            //Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee_db?allowPublicKeyRetrieval=true", "root", "root"); // Creates the connection
+
+            Connection connection = (Connection) getServletContext().getAttribute("connection");
 
             printWriter.print("<h2> Employee DB Connection Object : " + connection + "</h2>");
 
