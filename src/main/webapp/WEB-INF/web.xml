@@ -223,4 +223,26 @@
     <listener>
         <listener-class>com.exemplo.hello.servlets.scopes.session.listeners.ContextListener</listener-class>
     </listener>
+
+    <servlet>
+        <display-name>LoginServlet</display-name>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.exemplo.hello.sessiontrackingexample.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <display-name>DisplayCookiesServlet</display-name>
+        <servlet-name>DisplayCookiesServlet</servlet-name>
+        <servlet-class>com.exemplo.hello.sessiontrackingexample.DisplayCookiesServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DisplayCookiesServlet</servlet-name>
+        <url-pattern>/displayCookiesServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
