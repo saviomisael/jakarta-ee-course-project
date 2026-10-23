@@ -1,0 +1,22 @@
+- Servlet 2.2 - 1999
+  - J2EE 1.2
+- Servlet 2.3 - 2001
+  - J2EE 1.3
+- Servlet 2.4 - 2003
+  - J2EE 1.4
+- Servlet 2.5 - 2006
+  - Java EE 5
+- Servlet 3.0 - 2009
+  - Java EE 6
+- Servlet 3.1 - 2013
+  - Java EE 7
+- Servlet 4.0 - 2017
+  - Java EE 8
+- Servlet 4.0.3 - 2019
+  - Java EE 8
+- Servlet 5.0 - 2020
+  - Java EE 9
+- Servlet 6.0 - 2021
+  - Java EE 9.1
+- Servlet 6.1 - 2024
+  - Java EE 11
