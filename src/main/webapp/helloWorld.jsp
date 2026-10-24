@@ -9,7 +9,7 @@
     <title>Hello World JSP</title>
   </head>
   <body>
-    <!-- This is a expression -->
+    <!-- This is an expression, or you can call it a scriptlet. It is not allowed to use semi-colon on the expression.  -->
     Today is <%= new Date() %>
   </body>
 </html>
