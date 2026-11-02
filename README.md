@@ -46,6 +46,16 @@ O Tomcat implantará o WAR automaticamente. Acesse:
 http://localhost:8080/meu-projeto-tomcat/hello
 ```
 
+## Exemplo: POJO na sessão com JSP
+
+Acesse `/session-profile` para enviar nome e e-mail. O servlet salva os dados em um
+objeto `UserProfile` (um JavaBean/POJO) na sessão HTTP e encaminha para um JSP que
+declara o bean com `<jsp:useBean scope="session">` e exibe seus campos.
+
+```text
+http://localhost:8080/meu-projeto-tomcat/session-profile
+```
+
 Para parar o Tomcat:
 
 ```bash
