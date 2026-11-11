@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   mysql:
@@ -9,4 +9,7 @@ services:
       MYSQL_DATABASE: employee_db
     ports:
       - "3306:3306"
+    volumes:
+      # https://stackoverflow.com/questions/19158810/docker-mount-volumes-as-readonly
+      - ./employee-db-schema.sql:/docker-entrypoint-initdb.d/employee-db-schema.sql:ro
     restart: unless-stopped
