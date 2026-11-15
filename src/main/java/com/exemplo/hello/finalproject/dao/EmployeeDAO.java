@@ -9,5 +9,7 @@ public interface EmployeeDAO {
     boolean updateEmployee(Employee employee) throws Exception;
     boolean deleteEmployee(int employeeId) throws Exception;
     List<Employee> getAll() throws Exception;
+    List<Employee> getPage(int limit, int offset) throws Exception;
+    int getCount() throws Exception;
     Employee getEmployee(int employeeId) throws Exception;
 }

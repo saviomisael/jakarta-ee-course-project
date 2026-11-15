@@ -187,6 +187,42 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
     @Override
+    public List<Employee> getPage(int limit, int offset) throws Exception {
+        String sql = """
+                SELECT * FROM employee_db.employee
+                ORDER BY id
+                LIMIT ? OFFSET ?
+                """;
+
+        try (Connection connection = DBConnection.getConnection();
+             PreparedStatement ps = connection.prepareStatement(sql)) {
+            ps.setInt(1, limit);
+            ps.setInt(2, offset);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                List<Employee> employees = new ArrayList<>();
+                EmployeeMapper mapper = new EmployeeMapper();
+                while (rs.next()) {
+                    employees.add(mapper.buildEmployee(rs));
+                }
+                return employees;
+            }
+        }
+    }
+
+    @Override
+    public int getCount() throws Exception {
+        String sql = "SELECT COUNT(*) FROM employee_db.employee";
+
+        try (Connection connection = DBConnection.getConnection();
+             PreparedStatement ps = connection.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+            rs.next();
+            return rs.getInt(1);
+        }
+    }
+
+    @Override
     public Employee getEmployee(int employeeId) throws Exception {
         Connection connection = null;
         PreparedStatement ps = null;
