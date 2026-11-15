@@ -61,3 +61,8 @@ Para parar o Tomcat:
 ```bash
 "$CATALINA_HOME/bin/shutdown.sh"
 ```
+
+Para rodar o Tomcat com debug:
+```bash
+"$CATALINA_HOME/bin/catalina.sh jpda start"
+```
